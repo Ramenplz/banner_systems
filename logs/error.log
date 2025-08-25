@@ -1,0 +1,346 @@
+[08-Aug-2025 15:24:24 Asia/Bangkok] PHP Warning:  Undefined array key "image_type" in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 77
+[08-Aug-2025 15:24:24 Asia/Bangkok] PHP Warning:  Undefined array key "image_type" in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 77
+[08-Aug-2025 15:35:43 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/ เพิ่มฟิลด์นี้
+          FROM 
+            banne...' at line 13 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:29
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(29): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 29
+[08-Aug-2025 15:36:03 Asia/Bangkok] PHP Warning:  Undefined array key "image_type" in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 77
+[08-Aug-2025 15:36:03 Asia/Bangkok] PHP Warning:  Undefined array key "image_type" in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 77
+[08-Aug-2025 16:34:27 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\banner_system\platforms\edit.php:66
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\platforms\edit.php(66): PDOStatement->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\platforms\edit.php on line 66
+[08-Aug-2025 16:35:02 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\banner_system\platforms\edit.php:66
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\platforms\edit.php(66): PDOStatement->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\platforms\edit.php on line 66
+[08-Aug-2025 16:37:46 Asia/Bangkok] PHP Warning:  Undefined array key "platform_name" in C:\xampp\htdocs\banner_system\platforms\edit.php on line 74
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Warning:  Undefined array key "platform_description" in C:\xampp\htdocs\banner_system\platforms\edit.php on line 75
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Warning:  Undefined array key "base_url" in C:\xampp\htdocs\banner_system\platforms\edit.php on line 76
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[08-Aug-2025 16:37:47 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\banner_system\platforms\edit.php:115
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\platforms\edit.php(115): PDOStatement->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\platforms\edit.php on line 115
+[08-Aug-2025 16:46:41 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '// เพิ่มคอลัมน์นี้
+            bp.display_orde...' at line 5 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[08-Aug-2025 16:46:55 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+            banner_platforms bp
+          JOIN 
+            banners ...' at line 14 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:29
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(29): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 29
+[08-Aug-2025 16:49:42 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '// เพิ่มคอลัมน์นี้
+            bp.display_orde...' at line 5 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[08-Aug-2025 16:50:52 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '// เพิ่มคอลัมน์นี้
+            bp.display_orde...' at line 5 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[13-Aug-2025 09:34:10 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.start_date' in 'field list' in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[13-Aug-2025 09:34:12 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.start_date' in 'field list' in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[13-Aug-2025 09:46:01 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '// ดึงจาก banner_platforms
+            bp.end_date,            /...' at line 9 in C:\xampp\htdocs\banner_system\banner-platforms\manage.php:30
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banner-platforms\manage.php(30): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 30
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:28 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:46:45 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:55:00 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:41 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:57:42 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 56
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 57
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:58:29 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\manage.php on line 128
+[13-Aug-2025 09:59:23 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_date' in 'where clause' in C:\xampp\htdocs\banner_system\api\index.php:14
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\api\index.php(14): PDO->query('SELECT * FROM b...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\api\index.php on line 14
+[13-Aug-2025 10:00:04 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_date' in 'where clause' in C:\xampp\htdocs\banner_system\api\index.php:14
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\api\index.php(14): PDO->query('SELECT * FROM b...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\api\index.php on line 14
+[13-Aug-2025 10:06:25 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_date' in 'where clause' in C:\xampp\htdocs\banner_system\api\index.php:14
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\api\index.php(14): PDO->query('SELECT * FROM b...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\api\index.php on line 14
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 178
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 178
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 184
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 184
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 178
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 178
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 184
+[13-Aug-2025 10:41:24 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 184
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 177
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 177
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 183
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 183
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 177
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 177
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 183
+[13-Aug-2025 10:42:06 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 183
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Warning:  Undefined array key "target_url" in C:\xampp\htdocs\banner_system\banners\edit.php on line 28
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 29
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 30
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:42:13 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_date' in 'field list' in C:\xampp\htdocs\banner_system\banners\edit.php:81
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\banners\edit.php(81): PDO->prepare('UPDATE banners ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\banners\edit.php on line 81
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Warning:  Undefined array key "target_url" in C:\xampp\htdocs\banner_system\banners\edit.php on line 28
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 29
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 30
+[13-Aug-2025 10:42:58 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:01 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Warning:  Undefined array key "target_url" in C:\xampp\htdocs\banner_system\banners\edit.php on line 28
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 29
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 30
+[13-Aug-2025 10:43:08 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:35 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:54 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:54 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:54 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:54 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:55 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:55 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 173
+[13-Aug-2025 10:43:55 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:43:55 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 179
+[13-Aug-2025 10:58:35 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.start_date' in 'field list' in C:\xampp\htdocs\banner_system\index.php:65
+Stack trace:
+#0 C:\xampp\htdocs\banner_system\index.php(65): PDO->prepare('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\banner_system\index.php on line 65
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:27 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:29:46 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Warning:  Undefined array key "image_url" in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Warning:  Undefined array key "image_url" in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Warning:  Undefined array key "image_url" in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Warning:  Undefined array key "image_url" in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 11:35:43 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\banner-platforms\edit.php on line 189
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:08 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:14 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:14 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:14 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:14 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:15 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:15 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 170
+[13-Aug-2025 12:04:15 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:15 Asia/Bangkok] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\banner_system\banners\edit.php on line 176
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Warning:  Undefined array key "target_url" in C:\xampp\htdocs\banner_system\banners\edit.php on line 28
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Warning:  Undefined array key "start_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 29
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Warning:  Undefined array key "end_date" in C:\xampp\htdocs\banner_system\banners\edit.php on line 30
+[13-Aug-2025 12:04:42 Asia/Bangkok] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\banner_system\includes\config.php on line 53
+[13-Aug-2025 14:55:39 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:42 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:44 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:44 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:46 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:46 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:55:48 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:58:02 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:23 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:25 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:40 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:41 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:43 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:44 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:47 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:48 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:49 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:49 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:50 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 14:59:51 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 15:45:00 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 15:45:13 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 15:45:16 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 15:46:38 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 15:51:38 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:08:31 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:08:39 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:13:47 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:29:24 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:49:09 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
+[13-Aug-2025 16:49:11 Asia/Bangkok] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 
