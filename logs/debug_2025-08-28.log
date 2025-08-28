@@ -1,0 +1,1 @@
+[2025-08-28 09:13:35] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql100.infinityfree.com failed: No such host is known. 

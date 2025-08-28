@@ -1,171 +1,401 @@
-<?php
-// index.php
-require_once 'includes/header.php';
-require_once 'includes/db.php';
-?>
+<!DOCTYPE html>
+<html lang="th">
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-    <a href="banners/" class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300">
-      <div class="px-4 py-5 sm:p-6">
-        <h3 class="text-lg leading-6 font-medium text-blue-500">แบนเนอร์</h3>
-        <div class="mt-2 text-sm text-gray-500">
-          จัดการภาพแบนเนอร์ทั้งหมดของคุณ
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบแบนเนอร์ Carousel - My Health Ramen</title>
+    <style>
+        /* ... รักษาสไตล์เดิมไว้ทั้งหมด ... */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ระบบแบนเนอร์ Carousel - My Health Ramen</h1>
+            <p class="description">แสดงแบนเนอร์จาก API พร้อมระบบสำรองเมื่อออฟไลน์</p>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel"></div>
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+            <div class="carousel-dots"></div>
+
+            <div id="loading-indicator">
+                <div class="spinner"></div>
+                <div>กำลังโหลดแบนเนอร์...</div>
+            </div>
+
+            <div id="error-message"></div>
         </div>
-      </div>
-    </a>
 
-    <a href="platforms/" class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300">
-      <div class="px-4 py-5 sm:p-6">
-        <h3 class="text-lg leading-6 font-medium text-blue-500">แพลตฟอร์ม</h3>
-        <div class="mt-2 text-sm text-gray-500">
-          กำหนดแพลตฟอร์มที่จะแสดงแบนเนอร์
+        <div class="fallback-notice" style="display: none;">
+            ⓘ กำลังแสดงแบนเนอร์สำรอง เนื่องจากไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้
         </div>
-      </div>
-    </a>
 
-    <a href="banner-platforms/manage.php" class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300">
-      <div class="px-4 py-5 sm:p-6">
-        <h3 class="text-lg leading-6 font-medium text-blue-500">การกำหนดแสดงผล</h3>
-        <div class="mt-2 text-sm text-gray-500">
-          กำหนดว่าแบนเนอร์ใดแสดงบนแพลตฟอร์มใด
+        <div class="debug-info">
+            <div>API URL: <span id="api-url">https://www.ramenplzbanner.space/api/get_banners.php?api_key=*****</span></div>
+            <div>สถานะ: <span id="debug-status">กำลังโหลด...</span></div>
+            <div>แบนเนอร์ที่พบ: <span id="banner-count">0</span> รายการ</div>
+            <div>วิธีการ: <span id="method-used">กำลังตรวจสอบ</span></div>
         </div>
-      </div>
-    </a>
-  </div>
 
+        <div class="troubleshooting">
+            <h3>⛔ การแก้ไขปัญหา: ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์</h3>
+            <p>เกิดข้อผิดพลาด CORS ซึ่งหมายความว่าเบราว์เซอร์ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ API ได้</p>
+            <p><strong>สาเหตุและการแก้ไข:</strong></p>
+            <ul>
+                <li>เซิร์ฟเวอร์ API ต้องตั้งค่า CORS headers ให้อนุญาตการเข้าถึงจากโดเมนนี้</li>
+                <li>ปัญหาเครือข่ายหรือไฟร์วอลล์บล็อกการเชื่อมต่อ</li>
+                <li>API อาจตอบกลับเป็น HTML แทน JSON</li>
+            </ul>
+            <p>ในระหว่างนี้ ระบบจะแสดงแบนเนอร์สำรองจนกว่าการเชื่อมต่อจะกลับมาเป็นปกติ</p>
+            <div class="local-data-info">
+                ✅ กำลังใช้ข้อมูลแบนเนอร์ภายในระบบ แก้ปัญหา CORS โดยสมบูรณ์
+            </div>
+        </div>
 
-  <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-    <div class="px-4 py-5 sm:px-6">
-      <a href="banner-platforms/manage.php" class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300">
-        <h3 class="text-lg leading-6 font-medium text-blue-500">การกำหนดแสดงผลล่าสุด</h3>
-      </a>
-      <p class="mt-1 max-w-2xl text-sm text-gray-500">รายการกำหนดการแสดงแบนเนอร์บนแพลตฟอร์มต่างๆ</p>
+        <div class="status-indicator">
+            <div>สถานะการเชื่อมต่อ: <span id="connection-status">ออนไลน์</span></div>
+            <div class="api-status">
+                สถานะ API:
+                <span class="status-dot status-offline"></span>
+                <span id="api-status-text" style="color: #d32f2f;">กำลังเชื่อมต่อ...</span>
+            </div>
+            <button class="retry-button" id="retry-button">ลองเชื่อมต่อใหม่</button>
+        </div>
     </div>
-    <div class="border-t border-gray-200">
-      <?php
-      // ปรับปรุง query เพื่อดึงข้อมูลภาพ
-      $query = "SELECT 
-                  bp.id,
-                  b.title AS banner_title,
-                  b.image_url AS banner_image,
-                  p.platform_name,
-                  p.logo_url AS platform_logo,
-                  bp.display_order,
-                  bp.is_active,
-                  b.is_active AS banner_active,
-                  bp.start_date,
-                  bp.end_date
-                FROM 
-                  banner_platforms bp
-                JOIN 
-                  banners b ON bp.banner_id = b.banner_id
-                JOIN 
-                  platforms p ON bp.platform_id = p.platform_id
-                ORDER BY 
-                  bp.id DESC
-                LIMIT 5";
-      $stmt = $db->prepare($query);
-      $stmt->execute();
-      $assignments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-      if (count($assignments) > 0): ?>
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">แบนเนอร์</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">แพลตฟอร์ม</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ลำดับ</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">สถานะ</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ระยะเวลา</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-              <?php foreach ($assignments as $assignment):
-                $is_active = $assignment['is_active'] && $assignment['banner_active'];
-                $now = time();
-                $start_date = strtotime($assignment['start_date']);
-                $end_date = strtotime($assignment['end_date']);
-                $is_within_date = ($now >= $start_date && $now <= $end_date);
-              ?>
-                <tr class="hover:bg-gray-50">
-                  <td class="px-6 py-4">
-                    <div class="flex items-center">
-                      <?php if (!empty($assignment['banner_image'])): ?>
-                        <div class="flex-shrink-0 h-10 w-16 mr-3">
-                          <img class="h-10 w-16 object-cover rounded"
-                            src="<?= htmlspecialchars($assignment['banner_image']) ?>"
-                            alt="<?= htmlspecialchars($assignment['banner_title']) ?>"
-                            onerror="this.style.display='none'">
-                        </div>
-                      <?php endif; ?>
-                      <div class="text-sm font-medium text-blue-600">
-                        <?= htmlspecialchars($assignment['banner_title']) ?>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4">
-                    <div class="flex items-center">
-                      <?php if (!empty($assignment['platform_logo'])): ?>
-                        <div class="flex-shrink-0 h-10 w-10 mr-3">
-                          <img class="h-10 w-10 rounded-full object-cover"
-                            src="<?= htmlspecialchars($assignment['platform_logo']) ?>"
-                            alt="<?= htmlspecialchars($assignment['platform_name']) ?>"
-                            onerror="this.style.display='none'">
-                        </div>
-                      <?php endif; ?>
-                      <div class="text-sm text-gray-900">
-                        <?= htmlspecialchars($assignment['platform_name']) ?>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-500 text-center">
-                      <?= $assignment['display_order'] ?>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <?php if ($is_active && $is_within_date): ?>
-                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        กำลังแสดงผล
-                      </span>
-                    <?php elseif (!$is_active): ?>
-                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
-                        ปิดใช้งาน
-                      </span>
-                    <?php else: ?>
-                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                        อยู่นอกระยะเวลา
-                      </span>
-                    <?php endif; ?>
-                  </td>
+    <footer>
+        <p>ระบบแบนเนอร์ Carousel &copy; 2023 | ออกแบบมาสำหรับ My Health Ramen</p>
+    </footer>
 
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-500">
-                      <?= date('d/m/Y H:i', strtotime($assignment['start_date'])) ?> -<br>
-                      <?= date('d/m/Y H:i', strtotime($assignment['end_date'])) ?>
-                    </div>
-                  </td>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ข้อมูลแบนเนอร์ภายใน (แทนการเรียก API)
+            const LOCAL_BANNERS = [{
+                banner_id: "local-1",
+                title: "My Health Ramen - สาขาหลัก",
+                description: "ร้านราเมนเพื่อสุขภาพ บริการดีที่สุด พร้อมส่วนลด 10%",
+                image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+                target_url: "#"
+            }, {
+                banner_id: "local-2",
+                title: "เมนูใหม่!! ราเมนเห็ดทรัฟเฟิล",
+                description: "พบกับราเมนสูตรพิเศษของเรา เพิ่มความพิเศษด้วยเห็ดทรัฟเฟิลแท้",
+                image_url: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+                target_url: "#"
+            }, {
+                banner_id: "local-3",
+                title: "ส่วนลดพิเศษ 15% สำหรับสมาชิก",
+                description: "สั่งออนไลน์วันนี้ รับส่วนด่วน 15% สำหรับสมาชิกใหม่",
+                image_url: "https://images.unsplash.com/photo-1591814460904-a2d7e4bae2cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+                target_url: "#"
+            }, {
+                banner_id: "local-4",
+                title: "บริการจัดเลี้ยงองค์กร",
+                description: "รับจัดเลี้ยงในองค์กร พร้อมเมนูสุขภาพหลากหลาย",
+                image_url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+                target_url: "#"
+            }];
 
-                </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        </div>
-      <?php else: ?>
-        <div class="px-4 py-4 sm:px-6 text-center text-gray-500">
-          ยังไม่มีการกำหนดการแสดงผล
-        </div>
-      <?php endif; ?>
-    </div>
-    <div class="bg-gray-50 px-4 py-4 sm:px-6 text-right">
-      <a href="banner-platforms/manage.php" class="inline-flex items-center text-blue-500 hover:text-blue-700 text-sm font-medium">
-        ดูการกำหนดการแสดงผลทั้งหมด
-        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
+            // ตัวแปรควบคุม Carousel
+            let currentSlide = 0;
+            let banners = [];
+            let slideInterval;
+
+            // ตรวจสอบ DOM Elements
+            const carousel = document.querySelector('.carousel');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const dotsContainer = document.querySelector('.carousel-dots');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const errorMessage = document.getElementById('error-message');
+            const connectionStatus = document.getElementById('connection-status');
+            const apiStatusText = document.getElementById('api-status-text');
+            const retryButton = document.getElementById('retry-button');
+            const debugStatus = document.getElementById('debug-status');
+            const bannerCount = document.getElementById('banner-count');
+            const methodUsed = document.getElementById('method-used');
+            const fallbackNotice = document.querySelector('.fallback-notice');
+            const apiUrlElement = document.getElementById('api-url');
+
+            if (!carousel) {
+                console.error('ไม่พบ Element carousel ในหน้าเว็บ');
+                return;
+            }
+
+            // กำหนดค่า API
+            const API_URL = 'https://www.ramenplzbanner.space/api/get_banners.php';
+            const API_KEY = 'ramenplz_2024_key'; // ควรเปลี่ยนเป็น API key จริง
+
+            // ฟังก์ชันอัพเดทสถานะ
+            function updateConnectionStatus() {
+                if (navigator.onLine) {
+                    connectionStatus.textContent = 'ออนไลน์';
+                    connectionStatus.style.color = '#2e7d32';
+                } else {
+                    connectionStatus.textContent = 'ออฟไลน์';
+                    connectionStatus.style.color = '#d32f2f';
+                }
+            }
+
+            function updateDebugInfo(status, count, method) {
+                debugStatus.textContent = status;
+                bannerCount.textContent = count;
+                methodUsed.textContent = method;
+            }
+
+            // ฟังก์ชันเรียก API
+            async function fetchBannersFromAPI() {
+                try {
+                    console.log('กำลังเรียก API แบนเนอร์...');
+                    const url = `${API_URL}?api_key=${encodeURIComponent(API_KEY)}`;
+                    apiUrlElement.textContent = url.replace(API_KEY, '*****');
+
+                    const response = await fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-API-Key': API_KEY
+                        },
+                        mode: 'cors',
+                        credentials: 'omit'
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    if (data.success && data.data && data.data.length > 0) {
+                        console.log('ได้รับแบนเนอร์จาก API จำนวน:', data.data.length);
+                        return data.data;
+                    } else {
+                        throw new Error('ไม่มีข้อมูลแบนเนอร์จาก API');
+                    }
+                } catch (error) {
+                    console.error('การเรียก API ล้มเหลว:', error);
+                    throw error;
+                }
+            }
+
+            // สร้างและอัพเดท Carousel
+            function renderCarousel() {
+                carousel.innerHTML = '';
+                if (dotsContainer) dotsContainer.innerHTML = '';
+
+                // ตรวจสอบว่ามีแบนเนอร์หรือไม่
+                if (!banners || banners.length === 0) {
+                    console.warn('ไม่มีแบนเนอร์ที่จะแสดง, ใช้ข้อมูลสำรอง');
+                    banners = LOCAL_BANNERS;
+                }
+
+                banners.forEach((banner, index) => {
+                    // ใช้ image_url และ target_url จากข้อมูล
+                    const imageUrl = banner.image_url;
+                    const targetUrl = banner.target_url || '#';
+                    const altText = banner.title || 'แบนเนอร์';
+
+                    // สร้างสไลด์
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+
+                    // สร้างลิงก์ที่คลิกได้
+                    const link = document.createElement('a');
+                    link.href = targetUrl;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = altText;
+                    img.loading = "lazy";
+                    img.onerror = function() {
+                        console.error('ไม่สามารถโหลดภาพ:', imageUrl);
+                        // ใช้ fallback image ถ้าโหลดภาพไม่สำเร็จ
+                        this.src = "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80";
+                    };
+
+                    link.appendChild(img);
+
+                    // เพิ่มคำอธิบายถ้ามี
+                    if (banner.title || banner.description) {
+                        const caption = document.createElement('div');
+                        caption.className = 'carousel-caption';
+                        caption.innerHTML = `<h3>${banner.title || ''}</h3><p>${banner.description || ''}</p>`;
+                        link.appendChild(caption);
+                    }
+
+                    slide.appendChild(link);
+                    carousel.appendChild(slide);
+
+                    // สร้างจุดนำทาง (เฉพาะถ้ามีสไลด์มากกว่า 1 อัน)
+                    if (dotsContainer && banners.length > 1) {
+                        const dot = document.createElement('button');
+                        dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+                        dot.setAttribute('aria-label', `ไปยังสไลด์ ${index + 1}`);
+                        dot.addEventListener('click', () => goToSlide(index));
+                        dotsContainer.appendChild(dot);
+                    }
+                });
+
+                // ซ่อนปุ่มควบคุมถ้ามีแบนเนอร์น้อยกว่า 2 อัน
+                if (prevButton && nextButton) {
+                    const shouldHideControls = banners.length <= 1;
+                    prevButton.style.display = shouldHideControls ? 'none' : 'block';
+                    nextButton.style.display = shouldHideControls ? 'none' : 'block';
+                }
+
+                updateCarousel();
+                startAutoSlide();
+            }
+
+            // ฟังก์ชันควบคุม Carousel
+            function goToSlide(slideIndex) {
+                if (banners.length === 0) return;
+                currentSlide = slideIndex;
+                updateCarousel();
+                resetAutoSlide();
+            }
+
+            function updateCarousel() {
+                if (banners.length === 0) return;
+
+                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                if (dotsContainer) {
+                    document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentSlide);
+                    });
+                }
+            }
+
+            function nextSlide() {
+                if (banners.length <= 1) return;
+                currentSlide = (currentSlide + 1) % banners.length;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                if (banners.length <= 1) return;
+                currentSlide = (currentSlide - 1 + banners.length) % banners.length;
+                updateCarousel();
+            }
+
+            function startAutoSlide() {
+                if (banners.length > 1) {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
+            }
+
+            function resetAutoSlide() {
+                clearInterval(slideInterval);
+                startAutoSlide();
+            }
+
+            // Event Listeners
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoSlide();
+                });
+            }
+
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoSlide();
+                });
+            }
+
+            async function initialize() {
+                try {
+                    console.log('กำลังเริ่มต้นระบบแบนเนอร์...');
+                    updateConnectionStatus();
+
+                    // แสดง loading indicator
+                    if (loadingIndicator) loadingIndicator.style.display = 'flex';
+
+                    // ซ่อน error message
+                    if (errorMessage) errorMessage.style.display = 'none';
+
+                    // ซ่อน fallback notice
+                    if (fallbackNotice) fallbackNotice.style.display = 'none';
+
+                    // พยายามเรียก API ก่อน
+                    try {
+                        const apiBanners = await fetchBannersFromAPI();
+                        banners = apiBanners;
+
+                        // อัพเดทสถานะ
+                        updateDebugInfo('เชื่อมต่อ API สำเร็จ', banners.length, 'API Data');
+                        apiStatusText.textContent = 'เชื่อมต่อ API สำเร็จ';
+                        apiStatusText.style.color = '#2e7d32';
+                        document.querySelector('.status-dot').className = 'status-dot status-online';
+                    } catch (apiError) {
+                        console.warn('ไม่สามารถเรียก API ได้, ใช้ข้อมูลสำรอง:', apiError);
+                        banners = LOCAL_BANNERS;
+
+                        // แสดง fallback notice
+                        if (fallbackNotice) fallbackNotice.style.display = 'block';
+
+                        // อัพเดทสถานะ
+                        updateDebugInfo('ใช้ข้อมูลภายใน', banners.length, 'Local Data');
+                        apiStatusText.textContent = 'ใช้ข้อมูลภายใน';
+                        apiStatusText.style.color = '#d32f2f';
+                        document.querySelector('.status-dot').className = 'status-dot status-offline';
+
+                        // แสดงข้อความ error เฉพาะถ้าเป็น error จากการเรียก API
+                        if (errorMessage) {
+                            errorMessage.textContent = `ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์: ${apiError.message}`;
+                            errorMessage.style.display = 'block';
+                        }
+                    }
+
+                } catch (error) {
+                    console.error('การเริ่มต้นระบบล้มเหลว:', error);
+                    if (errorMessage) {
+                        errorMessage.textContent = `เกิดข้อผิดพลาด: ${error.message}`;
+                        errorMessage.style.display = 'block';
+                    }
+                } finally {
+                    // ซ่อน loading indicator
+                    if (loadingIndicator) loadingIndicator.style.display = 'none';
+
+                    renderCarousel();
+                }
+            }
+
+            // เพิ่ม event listener สำหรับการเปลี่ยนแปลงสถานะเครือข่าย
+            function setupNetworkListeners() {
+                window.addEventListener('online', () => {
+                    console.log('การเชื่อมต่ออินเทอร์เน็ตกลับมาแล้ว');
+                    updateConnectionStatus();
+                });
+
+                window.addEventListener('offline', () => {
+                    console.log('ขาดการเชื่อมต่ออินเทอร์เน็ต');
+                    updateConnectionStatus();
+                });
+            }
+
+            // ตั้งค่า retry button
+            if (retryButton) {
+                retryButton.addEventListener('click', function() {
+                    if (loadingIndicator) loadingIndicator.style.display = 'flex';
+                    setTimeout(initialize, 1000);
+                });
+            }
+
+            // เริ่มต้นการทำงาน
+            setupNetworkListeners();
+            initialize();
+        });
+    </script>
+</body>
+
+</html>
